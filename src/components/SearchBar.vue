@@ -1,29 +1,27 @@
 <template>
-  <div>
-    <input @input="onInput"/>
-  </div>
-
+	<div>
+		<input @input="onInput" />
+	</div>
 </template>
 
 <script>
-export default {
-  name:'SearchBar',
-  methods:{
-    onInput: function (event) {
-      //console.log(event.target.value);
-      this.$emit('termChange',event.target.value);
-    }
-  }
-};
-
+	export default {
+		name: 'SearchBar',
+		methods: {
+			onInput: function(event) {
+				//console.log(event.target.value);
+				this.$emit('termChange', event.target.value);
+			},
+		},
+	};
 </script>
 
 <style lang="css" scoped>
-input{
-  width:75%;
-}
-div{
-  text-align: center;
-  margin:20px;
-}
+	input {
+		width: 75%;
+	}
+	div {
+		text-align: center;
+		margin: 20px;
+	}
 </style>
